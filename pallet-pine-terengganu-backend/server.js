@@ -56,7 +56,7 @@ app.use("/api/products", productRoutes);
 async function initDB() {
   try {
     await sql`
-            CREATE TABLE IF NOT EXISTS products (
+            	  CREATE TABLE IF NOT EXISTS products (
                 id SERIAL PRIMARY KEY,
                 code VARCHAR(255) NOT NULL,
                 customer VARCHAR(255) NOT NULL,
