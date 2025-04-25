@@ -3,6 +3,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
+import homeRoutes from "./routes/homeRoute.js";
 import productRoutes from "./routes/productRoute.js";
 import authRoutes from "./routes/authRoute.js";
 import { initUserTable } from "./models/userModel.js";
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(helmet()); // helmet is a security middleware that helps to protect app by setting various HTTP headers
 app.use(morgan("dev")); // log the request
 
+app.use("/api/home", homeRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);
 
