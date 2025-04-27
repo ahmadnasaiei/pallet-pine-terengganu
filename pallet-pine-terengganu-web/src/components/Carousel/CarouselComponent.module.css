@@ -1,0 +1,44 @@
+.carouselImageWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 15.5px 14.5px -10px #9a9a9a;
+    border-radius: 15% 35% 15% 35% / 25% 30% 20% 30%;
+    transition: opacity 0.5s ease;
+  }
+}
+
+.react-multi-carousel-track {
+  margin: 0 !important;
+  padding: 10px 0;
+}
+
+.carouselItemInitial {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customDotList {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+}
+
+.customDotList button {
+  border: none;
+  background: #c4c4c4;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

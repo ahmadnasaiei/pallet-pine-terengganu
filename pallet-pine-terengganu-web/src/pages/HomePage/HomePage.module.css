@@ -10,9 +10,11 @@
   width: 70%;
   display: flex;
   margin: 0 auto;
+  gap: 6rem;
 }
 
 .headerTitle {
+  flex: 1;
   margin: auto 0;
 }
 
@@ -73,8 +75,12 @@
   margin-left: 1rem;
 }
 
+.headerImg {
+  flex: 1;
+}
+
 .headerImg img {
-  width: 650px;
+  width: 100%;
   height: auto;
 }
 
@@ -90,6 +96,8 @@
   padding-top: 4rem;
   width: 60%;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .outerContainer {
@@ -133,40 +141,138 @@
   line-height: 1.5rem;
 }
 
-.aboutContainer {
-  margin-top: 6rem;
-  width: 100%;
-  background-color: #fdf101;
+.aboutClientSection {
+  position: relative;
+  overflow: hidden;
+  margin-top: -6rem;
+}
 
-  padding-bottom: 200px;
+.aboutBackground {
+  position: absolute;
+  inset: 0;
+  background-color: #fdf101;
+  z-index: 0;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0px 8px 7px -6px rgba(48, 48, 48, 0.37);
+}
+
+.aboutContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .aboutContentWrapper {
   width: 70%;
-  margin: 0 auto;
+  margin: 6rem auto 0;
+  position: relative;
+  z-index: 1;
 }
 
 .aboutContent {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   padding-top: 5rem;
 }
 
 .aboutImageContainer {
   width: 100%;
-  max-width: 35rem;
+  max-width: 50%;
 }
 
-.aboutImageContainer img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  box-shadow: 0 15.5px 14.5px -10px #9a9a9a;
-  border-radius: 15% 35% 15% 35% / 25% 30% 20% 30%;
+.aboutText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutText h1 {
+  line-height: 2.7rem;
 }
 
 .aboutText span {
   font-family: "Noto Serif", serif;
   font-style: italic;
   font-weight: 700;
+}
+
+.aboutDescription p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.aboutContainer,
+.clientContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.clientContainer {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.clientContent {
+  margin: 10rem auto 0;
+  text-align: center;
+}
+
+.clientTitle {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dotDivContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dotDiv {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+}
+
+.clientTitle h1 {
+  font-size: 3rem;
+  word-break: break-word;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.clientTitle p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.clientLogoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin: 5rem 0;
+}
+
+.clientLogo {
+  width: 8rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.clientLogo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+  border-radius: 50%;
 }
