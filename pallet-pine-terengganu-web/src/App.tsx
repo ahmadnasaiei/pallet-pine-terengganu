@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/NavbarComponent";
 import HomePage from "./pages/HomePage/HomePage";
-import ProductPage from "./pages/ProductPage/ProductPage";
+import ProductPage from "./pages/ProductGalleryPage/ProductGalleryPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

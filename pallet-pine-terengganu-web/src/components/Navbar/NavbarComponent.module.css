@@ -1,54 +1,105 @@
-* {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-}
-
 .mainContainer {
   width: 100%;
-  height: fit-content;
-  background-color: yellow;
+  height: 3.5rem;
+  background-color: #fdf100;
   position: sticky;
   top: 0;
   z-index: 1000;
   font-size: 1rem;
 }
 
-.navContainer {
+.mainContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  max-width: 1200px;
+  height: 3px;
+  background: #343434;
+  z-index: -1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navContainer {
+  width: 70%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
 }
 
-.itemContainer ul,
+.leftItemContainer,
+.rightItemContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  gap: 4rem;
+}
+
+.rightItemContainer {
+  right: 22%;
+}
+
+.leftItemContainer {
+  left: 22%;
+}
+
+.leftItemContainer ul,
+li,
+a,
+.rightItemContainer ul,
 li,
 a {
   display: flex;
   position: relative;
   text-decoration: none;
+  padding-left: 0;
   list-style: none;
   gap: 4rem;
   color: #343434;
 }
 
-.itemContainer a::after {
+.leftItemContainer ul,
+li,
+a {
+  gap: 6.06rem;
+}
+
+.leftItemContainer a::after,
+.rightItemContainer a::after {
   content: "";
   position: absolute;
-  bottom: -20%;
-  width: 0%;
-  height: 4px;
-  background: #343434;
-  transition: width 0.3s;
-}
-
-.itemContainer a:hover::after {
+  bottom: -50%;
   width: 100%;
+  height: 0px;
+  background: #343434;
+  transition: height 0.2s;
 }
 
-.logo > img {
+.leftItemContainer a:hover::after,
+.rightItemContainer li > a:hover::after {
+  height: 8px;
+}
+
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+}
+
+.logoWrapper {
+  /* X-axis, Y-axis, blur radius */
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.404));
+}
+
+.logoWrapper img {
   width: 5rem;
   height: auto;
   clip-path: circle(50% at 50% 50%);
@@ -86,16 +137,11 @@ a {
   background-color: #585858;
 }
 
-@media screen and (max-width: 1100px) {
-  .itemContainer ul,
-  li,
-  a {
-    gap: 2rem;
-  }
+@media screen and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 900px) {
-  .itemContainer ul,
+  .leftItemContainer ul,
   li,
   a {
     font-size: 0.9rem;
@@ -106,7 +152,7 @@ a {
     font-size: 0.9rem;
   }
 
-  .logo > img {
+  .logoWrapper img {
     width: 4rem;
   }
 
