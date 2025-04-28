@@ -8,6 +8,7 @@ import Truck from "../../assets/svg/truck.svg?react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import {
   IMG_CAROUSEL,
+  CLIENT_LOGO,
   CLIENT_FEEDBACK,
 } from "../../constants/HomepageConstants.tsx";
 import CarouselComponent from "../../components/Carousel/CarouselComponent.tsx";
@@ -107,7 +108,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* CLIENT FEEDBACK */}
+        {/* OUR CLIENT */}
         <div className={s.clientContainer}>
           <div className={s.clientContent}>
             <div className={s.dotDivContainer}>
@@ -124,12 +125,47 @@ function HomePage() {
               </p>
             </div>
             <div className={s.clientLogoContainer}>
-              {CLIENT_FEEDBACK.map((item) => (
+              {CLIENT_LOGO.map((item) => (
                 <div className={s.clientLogo}>
                   <img src={item.imgPath} alt={item.alt} key={item.id} />
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FEEDBACK */}
+      <div className={s.feedbackContainer}>
+        <div className={s.feedbackContent}>
+          <div className={s.feedbackTitle}>
+            <h1>Ulasan Pelanggan Kami</h1>
+          </div>
+          <div className={s.feedbackCard}>
+            {CLIENT_FEEDBACK.map((item) => (
+              <div className={s.feedbackCardItem} key={item.id}>
+                <div className={s.feedbackHeader}>
+                  <span>
+                    {item.name
+                      .split(" ")
+                      .slice(0, 2) // Get the first two words
+                      .map((word) => word.charAt(0).toUpperCase()) // Take the first letter and capitalize
+                      .join("")}
+                  </span>
+                  <div>
+                    <p>{item.name}</p>
+                    <p>{item.item}</p>
+                  </div>
+                </div>
+                <div className={s.feedbackDesc}>
+                  <p>⭐️⭐️⭐️⭐️⭐️</p>
+                  <p>{item.feedback}</p>
+                </div>
+                <div className={s.feedbackDate}>
+                  <p>{item.date}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
