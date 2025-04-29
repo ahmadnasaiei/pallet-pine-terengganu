@@ -139,33 +139,42 @@ function HomePage() {
       <div className={s.feedbackContainer}>
         <div className={s.feedbackContent}>
           <div className={s.feedbackTitle}>
-            <h1>Ulasan Pelanggan Kami</h1>
+            <h1>Maklum Balas Pelanggan</h1>
+            <p>
+              Kami mempunyai ramai pelanggan yang berpuas hati dengan hasilnya.
+              Berikan kepercayaan anda dalam merealisasikan impian deko rumah
+              anda kepada kami. Jangan hanya dengar dari kami, dengar apa kata
+              pelanggan kami!
+            </p>
           </div>
           <div className={s.feedbackCard}>
-            {CLIENT_FEEDBACK.map((item) => (
-              <div className={s.feedbackCardItem} key={item.id}>
-                <div className={s.feedbackHeader}>
-                  <span>
-                    {item.name
-                      .split(" ")
-                      .slice(0, 2) // Get the first two words
-                      .map((word) => word.charAt(0).toUpperCase()) // Take the first letter and capitalize
-                      .join("")}
-                  </span>
-                  <div>
-                    <p>{item.name}</p>
-                    <p>{item.item}</p>
+            {CLIENT_FEEDBACK.map((item) => {
+              const initials = item.name
+                .split(" ")
+                .slice(0, 2)
+                .map((word) => word.charAt(0).toUpperCase())
+                .join("");
+
+              const bgColor = `${item.profileColor}`;
+
+              return (
+                <div className={s.feedbackCardItem} key={item.id}>
+                  <div className={s.feedbackHeader}>
+                    <span style={{ backgroundColor: bgColor }}>{initials}</span>
+                    <div>
+                      <p>{item.name}</p>
+                      <p>{item.location}</p>
+                    </div>
+                  </div>
+                  <div className={s.feedbackDesc}>
+                    <p>{item.feedback}</p>
+                  </div>
+                  <div className={s.feedbackDate}>
+                    <p>{item.date}</p>
                   </div>
                 </div>
-                <div className={s.feedbackDesc}>
-                  <p>⭐️⭐️⭐️⭐️⭐️</p>
-                  <p>{item.feedback}</p>
-                </div>
-                <div className={s.feedbackDate}>
-                  <p>{item.date}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

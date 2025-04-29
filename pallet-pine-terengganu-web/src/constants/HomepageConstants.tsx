@@ -31,80 +31,61 @@ export const CLIENT_FEEDBACK = [
   {
     id: 1,
     name: "Amirul Ikhwan",
+    location: "Kemaman, Terengganu",
     date: "10 days ago",
     item: "Study Table",
     feedback:
       "Order custom-made study table. Terbaik material dan kukuh. Sgt recommended utk para student atau ibu bapa kalau nak beli meja utk belajar di rumah waktu cuti sekolah/semester.",
+    profileColor: "#F6CFD9",
   },
   {
     id: 2,
     name: "Aiman Mohd",
+    location: "Bukit Payong, Terengganu",
     date: "2 weeks ago",
     item: "Dining Table",
     feedback:
       "Kasi lima bintang!! service terbaik orangnya baik dan peramah dan mudah kiree.. Meja kayu solid pine sangat2 cantik TOP!!👍👍👍",
+    profileColor: "#88AD46",
   },
   {
     id: 3,
     name: "Alicia Pooifong",
+    location: "Kuantan, Pahang",
     date: "8 days ago",
     item: "Hexagon Wall Shelves",
     feedback:
       "Nice Hexagon 👍👍 Reasonable price, quality and efficient service.",
+    profileColor: "#FFD95F",
   },
   {
     id: 4,
     name: "Ghazali Tawang",
+    location: "Dungun, Terengganu",
     date: "2 weeks ago",
     item: "Folding Barn Door",
     feedback:
       "Salam tuan. Terima kasih dapat datang pasang hari ni. Saya puas hati sangat dengan hasil kerja. Finishing kayu pun sangat cantik. InsyaAllah akan berhubung lagi kalau ada projek lain.",
+    profileColor: "#CB9CF1",
   },
   {
     id: 5,
-    name: "Mohd Shafiq",
-    date: "3 weeks ago",
-    item: "Kitchen Island",
-    feedback: "Harga, kualiti dan servis mmg mantappp👍👍👍👍👍",
-  },
-  {
-    id: 6,
-    name: "Aidi Saffuan",
-    date: "15 weeks ago",
-    item: "Dressing Table",
-    feedback:
-      "Servis terbaik dengan kualiti kerja yang sangat teliti. Harga berbaloi dengan bajet, yang penting menepati date line. Good job PPT and team. Recommended!",
-  },
-  {
-    id: 7,
-    name: "Nazri Salim",
-    date: "22 weeks ago",
-    item: "Arch TV Cabinet",
-    feedback:
-      "Assalamualaikum tuan mekasih banyak kabinet TV... Alhamdulillah saya dengan isteri puas hati sangat... mantap...",
-  },
-  {
-    id: 8,
     name: "Nora",
+    location: "Kg. Tok Jiring, Kuala Terengganu",
     date: "8 weeks ago",
     item: "Kitchen Island",
     feedback:
       "As salam. Alhamdulillah comel do'oh. Terima kasih banyak2. Kak Nora beli belaka dengan harga yang tersebut.",
+    profileColor: "#706C55",
   },
   {
-    id: 9,
-    name: "Sixty Five Vape Vapor",
-    date: "7 days ago",
-    item: "Cashier Counter",
+    id: 6,
+    name: "Aidi Saffuan",
+    location: "Temerloh, Pahang",
+    date: "15 weeks ago",
+    item: "Dressing Table",
     feedback:
-      "Terima kasih bang hantor ngan sekali pasang. Kaunter memang lawo molek ah, sutir sama macam ngan gambor kite bagi tu. Padu molek, tobak pun haha. TQTQ",
-  },
-  {
-    id: 10,
-    name: "Kenneth Wong",
-    date: "14 weeks ago",
-    item: "Flutted Wall Panel + Platform Bed",
-    feedback:
-      "Big thanks to Pallet Pine Terengganu and team. Had a pleasant chat with Mr. Aimy over whatsapp, he really know his stuff. I still cannot move on with how good my room has turned out hahaaa. Highly recommended.",
+      "Servis terbaik dengan kualiti kerja yang sangat teliti. Harga berbaloi dengan bajet, yang penting menepati date line. Good job PPT. Recommended!",
+    profileColor: "#FFA24C",
   },
 ];
