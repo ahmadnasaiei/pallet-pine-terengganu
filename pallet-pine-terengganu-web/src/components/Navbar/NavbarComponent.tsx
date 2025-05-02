@@ -9,27 +9,27 @@ function Navbar() {
   const itemList = [
     {
       id: 1,
-      title: "Home",
+      title: "Utama",
       link: "/",
     },
     {
       id: 2,
-      title: "About Us",
+      title: "Profil",
       link: "/about",
     },
     {
       id: 3,
-      title: "Services",
+      title: "Servis",
       link: "/services",
     },
     {
       id: 4,
-      title: "Product Gallery",
+      title: "Galeri Produk",
       link: "/product",
     },
     {
       id: 5,
-      title: "Contact Us",
+      title: "Hubungi",
       link: "/contact",
     },
   ];
