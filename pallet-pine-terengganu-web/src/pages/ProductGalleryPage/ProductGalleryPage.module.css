@@ -1,0 +1,18 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.rightColumn {
+  background-color: #ffb6b6;
+  padding: 1rem;
+}
+
+.leftColumn {
+  background-color: #b7b6ff;
+  padding: 1rem;
+}

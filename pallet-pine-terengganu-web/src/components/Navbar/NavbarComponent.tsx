@@ -25,7 +25,7 @@ function Navbar() {
     {
       id: 4,
       title: "Galeri Produk",
-      link: "/product",
+      link: "/product-gallery",
     },
     {
       id: 5,
