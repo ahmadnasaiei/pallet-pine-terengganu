@@ -130,3 +130,15 @@ export const deleteProduct = async (req, res) => {
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
+
+export const getProductCategory = async (req, res) => {
+  try {
+    const category = await sql`
+      SELECT DISTINCT category FROM products
+    `;
+    res.status(200).json({ success: true, data: category });
+  } catch (error) {
+    console.log("Error in getProductCategory function", error);
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+};
