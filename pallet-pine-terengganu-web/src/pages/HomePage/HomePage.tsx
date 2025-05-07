@@ -126,7 +126,7 @@ function HomePage() {
             </div>
             <div className={s.clientLogoContainer}>
               {CLIENT_LOGO.map((item) => (
-                <div className={s.clientLogo}>
+                <div key={item.id} className={s.clientLogo}>
                   <img src={item.imgPath} alt={item.alt} key={item.id} />
                 </div>
               ))}
