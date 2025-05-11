@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import s from "./ProductGalleryPage.module.css";
 import { useProductStore } from "../../store/useProductStore";
 import placeholderImg from "../../assets/img/product-1.jpg";
+import SyncLoader from "react-spinners/SyncLoader";
 
 interface ProductStore {
   products: any[];
@@ -28,7 +29,7 @@ function ProductGalleryPage() {
   }, [fetchProducts, fetchProducts]);
 
   return (
-    <div className={s.mainContainer}>
+    <main className={s.mainContainer}>
       <div className={s.leftColumn}>
         <div className={s.filterContainer}>
           <h3>Kategori</h3>
@@ -50,24 +51,30 @@ function ProductGalleryPage() {
       <div className={s.rightColumn}>
         <div className={s.productHeader}>
           <h1>Produk Kami</h1>
-          <span>{products.length} Produk</span>
+          <span>{products.length} item ditemui</span>
         </div>
-        <div className={s.productContainer}>
-          {products.map((item, idx) => (
-            <div key={idx} className={s.productCard}>
-              <div className={s.productImg}>
-                <img src={item.imgPath || placeholderImg} alt={item.item} />
+        {loading ? (
+          <div className={s.loadingContainer}>
+            <SyncLoader color="#FCF001" />
+          </div>
+        ) : (
+          <div className={s.productContainer}>
+            {products.map((item, idx) => (
+              <div key={idx} className={s.productCard}>
+                <div className={s.productImg}>
+                  <img src={item.imgPath || placeholderImg} alt={item.item} />
+                </div>
+                <div className={s.productDetail}>
+                  <span>{item.category}</span>
+                  <h3>{item.item}</h3>
+                  <p>{item.size}</p>
+                </div>
               </div>
-              <div className={s.productDetail}>
-                <span>{item.category}</span>
-                <h3>{item.item}</h3>
-                <p>{item.size}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
-    </div>
+    </main>
   );
 }
 

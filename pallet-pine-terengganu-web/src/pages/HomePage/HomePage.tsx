@@ -15,7 +15,7 @@ import CarouselComponent from "../../components/Carousel/CarouselComponent.tsx";
 
 function HomePage() {
   return (
-    <div className={s.mainContainer}>
+    <main className={s.mainContainer}>
       {/* HERO */}
       <div className={s.headerContainer}>
         <div className={s.headerTitle}>
@@ -178,7 +178,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
